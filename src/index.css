@@ -1,23 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-  --prime: #eaeef0;
+  --core: #eaeef0;
+  --primary : hsl(198, 89%, 55%);
   --grey: #666;
 }
 
 body {
   margin: 0;
   font-family: "poppins", sans-serif;
-  background: var(--prime);
+  background: var(--core);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-h4 {
-  margin: 0;
 }
 
 .App {
@@ -32,19 +29,47 @@ h4 {
   font-size: 1rem;
   padding: 2em;
   width: 70%;
-  border: 10px solid var(--prime);
+  border: 10px solid var(--core);
   border-radius: 20px;
   overflow: hidden;
   max-width: 600px;
   height: 80%;
-  background: var(--prime);
+  background: var(--core);
   box-shadow: -8px -8px 15px #fff,
-  8px 8px 15px rgb(0 0 0 / 15%),
-  inset 10px 10px 20px #00000017,
+  8px 8px 15px hsl(0deg 0% 0% / 15%),
+  inset 3px 3px 10px hsl(0deg 0% 0% / 15%),
   inset -5px -5px 15px #fff;
 }
 
+header h4 {
+  margin: 0 0 20px 0;
+}
 
+/* Button Component ------------------------ */
+
+.btn-round {
+  all: unset;
+  box-shadow: -8px -8px 15px #fff,
+  8px 8px 15px hsla(0, 0%, 0%, 15%);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-round:hover svg {
+  color: var(--primary);
+}
+
+.btn-round svg {
+  width: 30%;
+  height: 30%;
+  color: var(--grey);
+  transition: .3s;
+}
 
 
 
