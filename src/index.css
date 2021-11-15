@@ -4,6 +4,7 @@
   --core: #eaeef0;
   --primary : hsl(198, 89%, 55%);
   --grey: #666;
+  --text: #a1a1a1;
 }
 
 body {
@@ -15,6 +16,31 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+input {
+  font-size: 1rem;
+  background: var(--core);
+  box-shadow: inset 2px 3px 6px #ccc,
+    inset -3px -3px 7px #fbfbfb;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+::-webkit-input-placeholder {
+  color: var(--text);
+}
+
+:-ms-input-placeholder {
+  color: var(--text);
+}
+
+::placeholder {
+  color: var(--text);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: right;
 }
 
 .App {
@@ -28,7 +54,7 @@ code {
 .App .container {
   font-size: 1rem;
   padding: 2em;
-  width: 70%;
+  width: 65%;
   border: 10px solid var(--core);
   border-radius: 20px;
   overflow: hidden;
@@ -44,9 +70,21 @@ code {
 header h4 {
   margin: 0 0 20px 0;
 }
+header input {
+  font-weight: 500;
+  border-radius: 11px;
+  border: none;
+  padding-left: 22px;
+  height: 46px;
+  color: var(--text);
+  width: 70%;
+  margin-right: 25px;
+}
 
 /* Button Component ------------------------ */
-
+.btn-add {
+  margin-left: 20px;
+}
 .btn-round {
   all: unset;
   box-shadow: -8px -8px 15px #fff,
@@ -65,10 +103,11 @@ header h4 {
 }
 
 .btn-round svg {
-  width: 30%;
-  height: 30%;
+  stroke-width: 2px;
+  width: 40%;
   color: var(--grey);
   transition: .3s;
+  transform: scale(.9);
 }
 
 

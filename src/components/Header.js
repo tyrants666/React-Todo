@@ -6,7 +6,10 @@ const Header = ({title}) => {
     return (
         <header className="header">
             <h4 style={headingStyles} >{title}</h4>
-            <Button />
+            <div className="flex">
+                <input type="text" placeholder="Enter your mission" />
+                <Button title="check"/>
+            </div>
             {/* <h4>{props.name}</h4> */}
         </header>
     )
@@ -21,10 +24,10 @@ Header.propTypes = {
 }
 
 const headingStyles = {
-    color: 'red',
+    margin: '0 0 30px 0',
     fontSize: '1.4rem',
-    color: 'var(--grey)',
-    textTransform: 'uppercase',
+    color: 'var(--text)',
+    textAlign: 'center',
 }
 
 
