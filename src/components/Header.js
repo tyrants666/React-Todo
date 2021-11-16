@@ -8,7 +8,7 @@ const Header = ({title}) => {
             <h4 style={headingStyles} >{title}</h4>
             <div className="flex">
                 <input type="text" placeholder="Enter your mission" />
-                <Button title="check"/>
+                <Button title='add' />
             </div>
             {/* <h4>{props.name}</h4> */}
         </header>
@@ -16,7 +16,7 @@ const Header = ({title}) => {
 }
 
 Header.defaultProps = {
-    title: 'React Todo',
+    title: 'Todo',
 }
 
 Header.propTypes = {
