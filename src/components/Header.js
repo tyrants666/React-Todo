@@ -10,7 +10,6 @@ const Header = ({title}) => {
                 <input type="text" placeholder="Enter your mission" />
                 <Button title='add' />
             </div>
-            {/* <h4>{props.name}</h4> */}
         </header>
     )
 }
