@@ -30,6 +30,13 @@ function App() {
           day: 'Nov 12 2022',
           time: '10:00',
           reminder: true
+      },
+      {
+          id: 4,
+          title: 'Lets Finish This',
+          day: 'Nov 12 2022',
+          time: '10:00',
+          reminder: true
       }
   ]);
 
@@ -37,7 +44,9 @@ function App() {
     <div className="App">
       <div className="container">
         <Header />
+        <div className='task-wrapper container-left'>
         <Tasks tasks={tasks}/>
+        </div>
       </div>
     </div>
   );
