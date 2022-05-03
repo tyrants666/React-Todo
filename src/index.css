@@ -6,7 +6,10 @@
   --grey: #666;
   --text: #a1a1a1;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
   color: var(--text);
   margin: 0;
@@ -91,6 +94,11 @@ header input {
     margin-left: auto;
 }
 
+.notfound{
+    text-align: center;
+    font-size: 24px;
+}
+
 /* Button Component ------------------------ */
 .btn-add {
   margin-left: 20px;
@@ -122,7 +130,24 @@ header input {
 }
 
 /* Tasks Component ------------------------ */
+.task-wrapper h4 svg{
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 18px;
+}
 .task-wrapper h4{
-  margin: 17px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  cursor: default;
+  transition: .1s;
+}
+.task-wrapper h4:hover{
+  color: var(--primary);
+}
+.task{
+  /* margin: 17px 8px; */
+  margin: 17px 17px 17px 8px;
 }
 

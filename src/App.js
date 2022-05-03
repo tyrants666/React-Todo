@@ -40,13 +40,16 @@ function App() {
       }
   ]);
 
+  //Delete Task
+  const deleteTask = (id) => {
+    setTasks(tasks.filter(task => task.id !== id))
+  }
+
   return (
     <div className="App">
       <div className="container">
         <Header />
-        <div className='task-wrapper container-left'>
-        <Tasks tasks={tasks}/>
-        </div>
+        { tasks.length>0 ? <Tasks tasks={tasks} onDelete={deleteTask} /> : <p className='notfound'>🤘</p>}
       </div>
     </div>
   );

@@ -1,10 +1,11 @@
-
-const Tasks = (props) => {
+import Task from './Task'
+const Tasks = ({tasks, onDelete}) => {
     return (
-        <>  
-            {props.tasks.map (task => ( <h4 key={task.id}>{task.id}&nbsp;&nbsp;{task.title}</h4> ) 
+        <div className='task-wrapper container-left'>  
+            {tasks.map (task => ( 
+                <Task key={task.id} task={task} onDelete={onDelete} /> ) 
             )}
-        </>
+        </div>
     )
 }
 export default Tasks
