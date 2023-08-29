@@ -3,6 +3,7 @@
 :root{
   --core: #eaeef0;
   --primary : hsl(198, 89%, 55%);
+  --secondary : hsl(40, 89%, 55%);
   --grey: #666;
   --text: #a1a1a1;
 }
@@ -130,12 +131,13 @@ header input {
 }
 
 /* Tasks Component ------------------------ */
-.task-wrapper h4 svg{
-  margin-left: auto;
-  cursor: pointer;
-  font-size: 18px;
+.task{
+  /* margin: 17px 8px; */
+  margin: 17px 17px 17px 8px;
+  transition: .3s;
+  position: relative;
 }
-.task-wrapper h4{
+.task h4{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,11 +145,27 @@ header input {
   cursor: default;
   transition: .1s;
 }
-.task-wrapper h4:hover{
+.task h4:hover{
   color: var(--primary);
 }
-.task{
-  /* margin: 17px 8px; */
-  margin: 17px 17px 17px 8px;
+.task h4 svg.icon-delete {
+  cursor: pointer;
+  font-size: 18px;
+}
+.task svg.icon-important{
+  transition: .3s;
+  margin-left: auto;
+  margin-right: 5px;
+  color: var(--secondary);
+  font-size: 18px;
+
+}
+.task small{
+  user-select: none;
+}
+.task-reminder{
+  border-left: 3px solid var(--primary);
+  padding-left: 15px;
+  margin-left: -10px;
 }
 

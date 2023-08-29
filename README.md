@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Project followed by Traversy Media [React JS Crash Course](https://github.com/facebook/create-react-app).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

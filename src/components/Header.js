@@ -1,15 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Button from './Button'
+import AddTask from './AddTask'
 
 const Header = ({title}) => {
     return (
         <header className="header">
             <h4 style={headingStyles} >{title}</h4>
-            <div className="flex container-left">
-                <input type="text" placeholder="Enter your mission" />
-                <Button title='add' />
-            </div>
+            <AddTask className="container-left" />
         </header>
     )
 }
