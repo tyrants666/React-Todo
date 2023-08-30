@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import AddTask from './AddTask'
 
-const Header = ({title}) => {
+const Header = ({title, onAdd}) => {
     return (
         <header className="header">
             <h4 style={headingStyles} >{title}</h4>
-            <AddTask className="container-left" />
+            <AddTask onAdd={onAdd} className="container-left" />
         </header>
     )
 }

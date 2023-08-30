@@ -1,22 +1,34 @@
 import Button from './Button'
 import {useState} from 'react'
  
-const AddTask = ({className}) => {
+const AddTask = ({className, onAdd}) => {
 
-  const [text, SetText] = useState('')
-  const [time, SetTime] = useState(() => {
-    var today = new Date();
+  //Component local States -----------------------
+  const [title, SetTitle] = useState('')
+  const [day, SetDay] = useState(() => {
+    let today = new Date();
     return today.toDateString()
   })
   const [reminder, SetReminder] = useState(false)
 
+  //Form on Submit -------------------------------
+  const onSubmit = (e) => {
+    e.preventDefault()
+    if(!title){
+      alert('please add title')
+      return
+    }
+    onAdd({title, day, reminder})
+    SetTitle('');
+  }
+
   return (
-    <form className={`addform flex ${className}`}>
+    <form className={`addform flex ${className}`} onSubmit={onSubmit}>
         <input  
           type="text" 
           placeholder="Enter your mission" 
-          value={text}
-          onChange={(e) => SetText(e.target.value)} />
+          value={title}
+          onChange={(e) => SetTitle(e.target.value)} />
         <Button title='add' />
     </form>
   )
