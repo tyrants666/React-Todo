@@ -18,7 +18,7 @@ const AddTask = ({className, onAdd}) => {
       alert('please add title')
       return
     }
-    onAdd({title, day, reminder})
+    onAdd({title, day, reminder})  //Here desconstructor used instead of task object
     SetTitle('');
   }
 

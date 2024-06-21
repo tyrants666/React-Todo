@@ -9,8 +9,8 @@ const Button = () => {
     )
 }
 
-Button.propTypes = {
-    onClick: propTypes.func
-}
+// Button.propTypes = {
+//     onClick: propTypes.func
+// }
 
 export default Button

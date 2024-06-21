@@ -10,7 +10,7 @@ const Task = ({task, onDelete, onToggle}) => {
 
   return (
     <div className="task" onDoubleClick={() => onToggle(task.id) }>
-      <h4> {task.id}&nbsp;&nbsp;{task.title} 
+      <h4><span>{task.id}&nbsp;&nbsp;{task.title} </span>
         {task.reminder && <MdNotifications className="icon-important" />}
         <MdDelete className="icon-delete" onClick={() => onDelete(task.id) } />
       </h4>
