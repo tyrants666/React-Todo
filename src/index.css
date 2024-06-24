@@ -4,8 +4,9 @@
   --core: #eaeef0;
   --primary : hsl(198, 89%, 55%);
   --secondary : hsl(40, 89%, 55%);
-  --red: hsl(0, 95.38%, 69.3%);
+  --red: hsl(0, 89%, 74%);
   --grey: #666;
+  --grey-300: #7f7f7f;
   --text: #a1a1a1;
 }
 *{
@@ -79,6 +80,7 @@ header {
 
 header h4 {
   margin: 0 0 20px 0;
+  user-select: none;
 }
 header input {
   font-weight: 500;
@@ -145,9 +147,10 @@ header input {
   margin: 0;
   cursor: default;
   transition: .1s;
+  user-select: none;
 }
 .task:hover span{
-  color: var(--primary);
+  color: var(--grey-300);
 }
 .task h4 svg.icon-delete:hover{
   color: var(--red);
@@ -161,6 +164,14 @@ header input {
   margin-left: auto;
   margin-right: 5px;
   color: var(--secondary);
+  font-size: 18px;
+
+}
+.task svg.icon-not-important{
+  transition: .3s;
+  margin-left: auto;
+  margin-right: 5px;
+  /* color: var(--secondary); */
   font-size: 18px;
 
 }

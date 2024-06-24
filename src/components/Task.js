@@ -1,4 +1,4 @@
-import { MdDelete, MdNotifications } from "react-icons/md"
+import { MdDelete, MdNotifications, MdNotificationsNone } from "react-icons/md"
 
 
 const Task = ({task, onDelete, onToggle}) => {
@@ -11,7 +11,7 @@ const Task = ({task, onDelete, onToggle}) => {
   return (
     <div className="task" onDoubleClick={() => onToggle(task.id) }>
       <h4><span>{task.id}&nbsp;&nbsp;{task.title} </span>
-        {task.reminder && <MdNotifications className="icon-important" />}
+        {task.reminder ? <MdNotificationsNone className="icon-not-important"/> : <MdNotifications className="icon-important" />}
         <MdDelete className="icon-delete" onClick={() => onDelete(task.id) } />
       </h4>
       <small>{task.day}</small>
