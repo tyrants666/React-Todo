@@ -1,6 +1,6 @@
 
 import { BsPlusLg } from "react-icons/bs";
-import propTypes from "prop-types";
+// import propTypes from "prop-types";
 
 
 const Button = () => {
