@@ -1,15 +1,17 @@
 import Button from './Button'
 import {useState} from 'react'
+import CustomCheckbox from './CustomCheckbox'
+import CustomDate from './CustomDate'
  
 const AddTask = ({className, onAdd}) => {
 
   //Component local States -----------------------
   const [title, SetTitle] = useState('')
-  const [day, SetDay] = useState(() => {
+  const [day, setDay] = useState(() => {
     let today = new Date();
     return today.toDateString()
   })
-  const [reminder, SetReminder] = useState(false)
+  const [reminder, setReminder] = useState(false)
 
   //Form on Submit -------------------------------
   const onSubmit = (e) => {
@@ -29,6 +31,8 @@ const AddTask = ({className, onAdd}) => {
           placeholder="Enter your mission" 
           value={title}
           onChange={(e) => SetTitle(e.target.value)} />
+        <CustomDate setDay={setDay} />
+        <CustomCheckbox checked={reminder} onToggle={setReminder} />
         <Button title='add' />
     </form>
   )
