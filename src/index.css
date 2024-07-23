@@ -8,6 +8,7 @@
   --grey: #666;
   --grey-300: #7f7f7f;
   --text: #a1a1a1;
+  --text-300: #b9b9b9;
 }
 ::-moz-selection {
   background: var(--primary);
@@ -93,6 +94,9 @@ input[type="checkbox"]{
 
 header {
   margin-bottom: 50px;
+  @media(max-width: 767px) {
+    margin-bottom: 25px;
+  }
 }
 
 header h4 {
@@ -135,12 +139,10 @@ header form{
 
 /* Global Component ------------------------ */
 .in {
-  box-shadow: inset 2px 3px 6px #ccc,
-    inset -3px -3px 7px #fbfbfb;
+  box-shadow: inset 2px 3px 6px #ccc, inset -3px -3px 7px #fbfbfb;
 }
 .out{
-  box-shadow: -8px -8px 15px #fff,
-      8px 8px 15px hsla(0, 0%, 0%, 15%);
+  box-shadow: -8px -8px 15px #fff, 8px 8px 15px hsla(0, 0%, 0%, 15%);
 }
 
 /* custon checkbox/date ------ */
@@ -212,6 +214,27 @@ header form{
 }
 
 /* Tasks Component ------------------------ */
+.task-wrapper.container-left::-webkit-scrollbar { width: 5px; }
+.task-wrapper.container-left::-webkit-scrollbar-track { 
+  background-color: #f1f1f1;
+  box-shadow: inset 2px 3px 6px #ccc, inset -3px -3px 7px #fbfbfb;
+  border-radius: 5px;
+}
+.task-wrapper.container-left::-webkit-scrollbar-thumb { 
+  background-color: var(--text-300);
+  box-shadow: -8px -8px 15px #fff, 8px 8px 15px hsla(0, 0%, 0%, 15%);
+  border-radius: 5px;
+}
+@media (max-width: 767px) {
+  .task-wrapper.container-left::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.task-wrapper.container-left{
+  max-height: calc(100% - 170px);
+  overflow: auto;
+}
 .task{
   /* margin: 17px 8px; */
   margin: 17px 17px 17px 8px;

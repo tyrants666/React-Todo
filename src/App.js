@@ -33,7 +33,21 @@ function App() {
       },
       {
           id: 4,
-        title: 'Lets finish this',
+          title: 'Lets finish this',
+          day: 'Nov 12 2022',
+          time: '10:00',
+          reminder: true
+      },
+      {
+          id: 5,
+          title: 'Rent Renew',
+          day: 'Nov 12 2022',
+          time: '10:00',
+          reminder: true
+      },
+      {
+          id: 6,
+          title: 'Electricity Bill Pay 💰',
           day: 'Nov 12 2022',
           time: '10:00',
           reminder: true
