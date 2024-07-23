@@ -26,7 +26,9 @@ body {
   font-family: "poppins", sans-serif;
   background: var(--core);
 }
-
+a{
+  color: var(--secondary);
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -73,6 +75,7 @@ input[type="checkbox"]{
 }
 
 .App .container {
+  position: relative;
   font-size: 1rem;
   padding: 2em;
   width: 65%;
@@ -234,6 +237,9 @@ header form{
 .task-wrapper.container-left{
   max-height: calc(100% - 170px);
   overflow: auto;
+  @media(max-width: 470px) {
+    max-height: calc(100% - 198px);
+  }
 }
 .task{
   /* margin: 17px 8px; */
@@ -287,5 +293,22 @@ header form{
   border-left: 3px solid var(--primary);
   padding-left: 15px;
   margin-left: -10px;
+}
+/* Footer Component ------------------------ */
+footer{
+    padding: 5px 0 14px;
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    @media(max-width: 470px) {
+      padding-bottom: 10px;
+    }
 }
 

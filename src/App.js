@@ -2,7 +2,10 @@
 // import './App.css';
 import Header from './components/Header';
 import Tasks from './components/Tasks';
+import Footer from './components/Footer';
+import About from './components/About'
 import { useState, useEffect } from "react"
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
    
@@ -70,12 +73,23 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <div className="container">
-        <Header onAdd={addTask} />
-        { tasks.length>0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : <p className='notfound'>🤘</p>}
+    <Router>
+      <div className="App">
+        <div className="container">
+          <Routes>
+            <Route path='/' element={
+              <>
+                <Header onAdd={addTask} />
+                { tasks.length>0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : <p className='notfound'>🤘</p>}
+                <Footer />
+              </>
+            }>
+            </Route>
+            <Route path='/about' element={<About />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
