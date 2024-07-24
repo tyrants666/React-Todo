@@ -40,6 +40,8 @@ function App() {
   const addTask = async (task) => {
     const res = await fetch('https://ay-todo-server.netlify.app/api/tasks',{ //This return added task from server
       method: 'POST',
+      credentials: 'include',
+      mode: 'cors',
       headers:{
         'Content-type': 'application/json'
       },
@@ -51,7 +53,11 @@ function App() {
 
   //Delete Task
   const deleteTask = async (id) => {
-    await fetch(`https://ay-todo-server.netlify.app/api/tasks/${id}`,{method: 'DELETE'})
+    await fetch(`https://ay-todo-server.netlify.app/api/tasks/${id}`, {
+      method: 'DELETE',
+      credentials: 'include',
+      mode: 'cors'
+    })
     setTasks(tasks.filter(task => task.id !== id))
   }
 
@@ -61,6 +67,8 @@ function App() {
     const updateTask = { ...taskToToggle, reminder: !taskToToggle.reminder}
     const res = await fetch(`https://ay-todo-server.netlify.app/api/tasks/${id}`, { //This return added task from server
       method: 'PUT',
+      credentials: 'include',
+      mode: 'cors',
       headers: {
         'Content-type': 'application/json'
       },
