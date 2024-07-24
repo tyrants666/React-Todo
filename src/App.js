@@ -43,6 +43,7 @@ function App() {
       credentials: 'include',
       mode: 'cors',
       headers:{
+        'Cache-Control': 'no-cache',
         'Content-type': 'application/json'
       },
       body:JSON.stringify(task)
@@ -70,7 +71,8 @@ function App() {
       credentials: 'include',
       mode: 'cors',
       headers: {
-        'Content-type': 'application/json'
+        'Content-type': 'application/json',
+        'Cache-Control': 'no-cache'
       },
       body: JSON.stringify(updateTask)
     })
